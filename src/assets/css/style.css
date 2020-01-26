@@ -1,0 +1,293 @@
+html, body, div, span {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #dfdfdf;
+	position: relative;
+}
+
+/* body:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 79px;
+	background-color: #2b4288;
+	position: absolute;
+	top: 0;
+	left: 0;
+} */
+
+.no-padding {
+	padding: 0;
+}
+
+.App {
+	position: relative;
+	overflow: hidden;
+	/* top: 19px; */
+	/* height: calc(100% - 38px); */
+	height: 100%;
+	margin: auto;
+	padding: 0;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.App__row {
+	background-color: #f7f7f7;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 700px) {
+	.App {
+		top: 0;
+		height: 100%;
+	}
+}
+
+.Message {
+	margin: 25px;
+	height: auto;
+}
+
+.Message--sender {
+	text-align: right;
+}
+
+.Message__wrapper__body {
+	width: auto;
+	max-width: 40%;
+	padding: 4px 10px 7px;
+	display: inline-block;
+}
+
+.Message--sender .Message__wrapper__body {
+	text-align: left;
+	/* border-radius: 10px 10px 0 10px; */
+	border-radius: 5px;
+	background: #2b4288;
+	color: #fff;
+	font-weight: 600
+}
+
+.Message--receiver .Message__wrapper__body {
+	/* border-radius: 10px 10px 10px 0; */
+	border-radius: 5px;
+	background: #ffffff;
+	font-weight: 600
+}
+
+.Message__wrapper__body__text {
+	word-wrap: break-word;
+}
+
+.Message__wrapper__body__sentAt {
+	word-wrap: break-word;
+	margin: 10px 0 0 0;
+	text-align: right;
+	color: #9a9a9a;
+}
+
+.Chat {
+	padding: 10px 0 0 0;
+	margin: 0;
+	height: calc(100% - 120px);
+	overflow-y: scroll;
+}
+
+.Conversation {
+	padding: 0;
+	border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.ConversationHeading__avatar {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.ConversationHeading__avatar__icon img {
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+}
+
+.ConversationHeading__name__meta {
+	text-overflow: ellipsis;
+	color: #fff;
+}
+
+.ConversationHeading__online {
+	color: #fff;
+	font-size: 12px;
+}
+
+.ConversationHeading__dot {
+	text-align: right;
+}
+
+.ConversationHeading__dot__icon {
+	vertical-align: -50%;
+	color: #fff;
+	font-size: 20px;
+	padding-right: 20px;
+	display: inline;
+}
+
+.ConversationsArchiveItem {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f7f7f7;
+	height: 72px;
+}
+
+.ConversationsArchiveItem:hover {
+	background-color: #f2f2f2;
+}
+
+.ConversationsArchiveItem__avatar {
+	padding-right: 0;
+}
+
+.ConversationsArchiveItem__avatar__icon img {
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+}
+
+.Conversations__avatar__icon img {
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;	 
+}
+
+.ConversationsArchiveItem__info__time {
+	color: rgba(0, 0, 0, 0.4);
+	font-size: 12px;
+}
+
+.ConversationsArchive {
+	margin: 0;
+	background-color: #fff;
+	overflow-y: scroll;
+	/*height: calc(100% - 120px);*/
+	height: calc(100% - 160px);
+}
+
+.AllConversationsArchive {
+	margin: 0;
+	background-color: #fff;
+	overflow-y: scroll;
+	height: calc(100% - 120px);
+}
+
+.Heading {
+	padding: 10px 15px 10px 15px;
+	margin: 0;
+	height: 60px;
+	background-color: #2b4288;
+}
+
+.OverlapHeading {
+	margin: 0;
+	height: 60px;
+	background-color: #2b4288;
+	color: #fff;
+	/* border: 2px solid lightgray; */
+}
+
+.OverlapHeading__heading__title, .OverlapHeading__heading__backButton {
+	line-height: 60px;
+}
+
+.OverlapHeading__heading__backButton {
+	padding-right: 0;
+	text-align: left;
+	cursor: pointer;
+}
+
+.ReplyBar {
+	background-color: #f5f1ee;
+	margin: 0;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+.ReplyBar__emojis, .ReplyBar__recording, .ReplyBar__send {
+	font-size: 20px;
+	text-align: center;
+	color: #93918f;
+}
+
+.ReplyBar__form {
+	padding: 0;
+}
+
+.ReplyBar__form__input, .ReplyBar__form__input:focus {
+	border-color: #ccc;
+	box-shadow: none;
+}
+
+.SearchBox {
+	padding: 0;
+	margin: 0;
+	height: 60px;
+}
+
+.SearchBox__form {
+	padding: 10px;
+	background-color: #fbfbfb;
+}
+
+.SearchBox__form__input, .SearchBox__form__input:focus {
+	border-color: #ccc;
+	box-shadow: none;
+}
+
+.SearchBox__form__search_icon {
+	color: #93918f;
+}
+
+.SideBar {
+	padding: 0;
+}
+
+.SideBar__second {
+	z-index: 2;
+	position: relative;
+	top: -100%;
+	left: -100%;
+	transition: left 0.3s ease;
+}
+
+.SideBar--second-active .SideBar__second {
+	left: 0 !important;
+}
+
+.SideBarHeading__avatar {
+	padding: 0;
+}
+
+.SideBarHeading__avatar__icon img {
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+}
+
+.SideBarHeading__menu, .SideBarHeading__conversations {
+	padding-right: 0;
+	padding-left: 0;
+	text-align: right;
+	line-height: 35px;
+	color: #fff;
+}
+
+.SideBarHeading__conversations__icon {
+	cursor: pointer;
+}
