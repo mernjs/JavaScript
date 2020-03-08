@@ -16,9 +16,11 @@ const HomeScreen = ({ viewState, showChatScreen, searchTerm }) => {
 		position = "-100%";
 	} else if (viewState === "3") {
 		position = "-200%";
-	} else if (viewState === "4") {
-		position = "-300%";
-	}
+	} 
+
+	// else if (viewState === "4") {
+	// 	position = "-300%";
+	// }
 	
 	return (
 
@@ -26,19 +28,19 @@ const HomeScreen = ({ viewState, showChatScreen, searchTerm }) => {
 		
 			<CarouselTrack goToSlide={position}>
 				
-				<Slide defaultPosition={"0%"}>
+				{/*<Slide defaultPosition={"0%"}>
 					<ActiveTab />
-				</Slide>
+				</Slide>*/}
 
-				<Slide defaultPosition={"100%"}>
+				<Slide defaultPosition={"0%"}>
 					<ChatsTab searchTerm={searchTerm} showChatScreen={showChatScreen} />
 				</Slide>
 				
-				<Slide defaultPosition={"200%"}>
+				<Slide defaultPosition={"100%"}>
 					<StoriesTab/>	
 				</Slide>
 				
-				<Slide defaultPosition={"300%"}>
+				<Slide defaultPosition={"200%"}>
 					<CallsTab />
 				</Slide>
 

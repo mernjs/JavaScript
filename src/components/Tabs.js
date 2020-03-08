@@ -7,13 +7,22 @@ const Tabs = ({ changeViewState, viewState }) => {
 	
 		<StyledHeaderNav>
 			
-			<StyledNavItem
+			{/*<StyledNavItem
 				data-nav="1"
 				onClick={changeViewState}
 				viewState={viewState}
 				current="1"
 			>
 				All
+			</StyledNavItem>*/}
+
+			<StyledNavItem
+				data-nav="1"
+				onClick={changeViewState}
+				viewState={viewState}
+				current="1"
+			>
+				CHATS (21)
 			</StyledNavItem>
 
 			<StyledNavItem
@@ -22,7 +31,7 @@ const Tabs = ({ changeViewState, viewState }) => {
 				viewState={viewState}
 				current="2"
 			>
-				CHATS (21)
+				STORIES
 			</StyledNavItem>
 
 			<StyledNavItem
@@ -30,15 +39,6 @@ const Tabs = ({ changeViewState, viewState }) => {
 				onClick={changeViewState}
 				viewState={viewState}
 				current="3"
-			>
-				STORIES
-			</StyledNavItem>
-
-			<StyledNavItem
-				data-nav="4"
-				onClick={changeViewState}
-				viewState={viewState}
-				current="4"
 			>
 				CALLS
 			</StyledNavItem>
