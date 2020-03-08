@@ -61,7 +61,7 @@ class SideBar extends Component {
 					</div>
 
 					<ul className="nav nav-tabs nav-justified">
-					  	<li className="active"><a data-toggle="tab" href="#chats">CHATS</a></li>
+					  	<li className="active"><a data-toggle="tab" href="#chats">CHATS (21)</a></li>
 					  	<li><a data-toggle="tab" href="#stories">STORIES</a></li>
 					  	<li><a data-toggle="tab" href="#calls">CALLS</a></li>
 					</ul>
