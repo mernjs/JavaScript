@@ -61,76 +61,14 @@ class SideBar extends Component {
 					</div>
 
 					<ul className="nav nav-tabs nav-justified">
-					  	<li className="active"><a data-toggle="tab" href="#all">All</a></li>
-					  	<li><a data-toggle="tab" href="#chats">CHATS</a></li>
+					  	<li className="active"><a data-toggle="tab" href="#chats">CHATS</a></li>
 					  	<li><a data-toggle="tab" href="#stories">STORIES</a></li>
 					  	<li><a data-toggle="tab" href="#calls">CALLS</a></li>
 					</ul>
 
 				<div class="tab-content">
 
-				  	<div id="all" class="tab-pane fade in active">
-					   
-					  	<div className="SearchBox row">
-
-							<div className="SearchBox__form col-md-12">
-							
-								<div className="form-group has-feedback">
-							
-									<input type="text" className="SearchBox__form__input form-control" onChange={e => this.onSearchInSideBarFirst(e.target.value)} />
-							
-									<span className="SearchBox__form__search_icon glyphicon glyphicon-search form-control-feedback" />
-							
-								</div>
-							
-							</div>
-						
-						</div>
-
-						<div className="ConversationsArchive row">
-							
-							{this.props.conversations.map(conversation => (
-							
-								<div key={conversation.uuid} onClick={() => this.props.loadMessages(conversation)} className="ConversationsArchiveItem col-md-12 col-sm-12 col-xs-12" >
-							
-									<div className="row">
-							
-										<div className="ConversationsArchiveItem__avatar col-md-3 col-sm-3 col-xs-3">
-							
-											<div className="ConversationsArchiveItem__avatar__icon">
-							
-												<img src={conversation.avatar} alt="avatar" />
-							
-											</div>
-							
-										</div>
-							
-										<div className="ConversationsArchiveItem__info col-md-9 col-sm-9 col-xs-9">
-							
-											<span className="ConversationsArchiveItem__info__name">
-											
-												<strong>{conversation.name}</strong>
-											
-												<span style={{float: "right", fontSize: '10px'}}>12:20 AM</span>
-											
-											</span>
-							
-										</div>
-							
-									</div>
-							
-								</div>
-							
-							))}
-					
-						</div>
-
-					</div>
-
-
-
-
-				  	<div id="chats" class="tab-pane fade in">
+				  	<div id="chats" class="tab-pane fade in active">
 					   
 					  	<div className="SearchBox row">
 
