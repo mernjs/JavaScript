@@ -1,7 +1,7 @@
 {
   "name": "electronapp",
   "version": "0.1.0",
-  "main": "electron.js",
+  "main": "src/electron.js",
   "private": true,
   "scripts": {
     "web": "react-scripts start",
