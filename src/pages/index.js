@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styled from "styled-components";
 
 const Home = () => {
+    const [height, setHeight] = useState(700)
+    useEffect(() => {
+        setTimeout(() => {
+            setHeight(window.screen.availHeight)
+            var iframe = document.getElementById('myIframe');
+            var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+            console.log('innerDoc', innerDoc)
+            // elmnt.style.display = "none";
+
+        }, 5000)
+    }, [])
     return (
         <>
             <ScrollView>
                 <Header />
                 <Container>
-                    <h1>Home</h1>
+                <iframe id='myIframe' src="https://docs.google.com/forms/d/e/1FAIpQLSdG5gL_TYXkx_ven6P5pRJ1UVA-EuYzGleH7ayQ7llr5jF36w/viewform?embedded=true" width="100%" height={height} frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </Container>
             </ScrollView>
             <Footer/>

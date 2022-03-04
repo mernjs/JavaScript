@@ -6,6 +6,10 @@ const GlobalStyles = createGlobalStyle`
 		padding: 0;
 		background: ${props => props.theme.colors.bgColor};
 	}
+
+    .tIvQIf.m7w29c{
+        display: none
+    }
     
   	* {
 		font-family: "Montserrat";

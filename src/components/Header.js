@@ -18,10 +18,10 @@ export default (props) => {
             <div className="container">
                 <Navbar>
                     <Logo>
-                        <Link href="/"><b>Create MERN App</b></Link> 
+                        <Link href="/"><b>General Polling</b></Link> 
                     </Logo>
                     <ul>
-                        <li>
+                        {/* <li>
                             <Link href="/">
                                 Home
                             </Link> 
@@ -53,7 +53,7 @@ export default (props) => {
                                     </a> 
                                 </li>
                             </>
-                        }
+                        } */}
                         <li> 
                             <AiFillAlert style={{cursor: 'pointer', fontSize: '20px', marginTop: '3px'}} onClick={switchTheme} />
                         </li>
