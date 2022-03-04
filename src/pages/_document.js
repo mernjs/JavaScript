@@ -16,20 +16,20 @@ class MyDocument extends Document {
                     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <meta name="theme-color" content="#000000" />
-                    <meta name="description" content="Please choose who will become CM in UP. Created By Vijay Pratap Singh."/>
-                    <title>General Polling</title>
+                    <meta name="description" content="Early voting, also called pre-poll voting. Created By Vijay Pratap Singh (+919838111071)."/>
+                    <title>Pre Voting</title>
                     <meta property="og:type" content="website"/>
-                    <meta property="og:url" content="https://general-polling.herokuapp.com/" />
-                    <meta property="og:title" content="General Polling" />
-                    <meta property="og:description" content="Please choose who will become CM in UP. Created By Vijay Pratap Singh." />
-                    <meta property="og:image" content="https://res.cloudinary.com/dyzcjrfca/image/upload/v1646415517/Election-Vote-2-icon_n4wj37.png" />
+                    <meta property="og:url" content="https://pre-voting.herokuapp.com" />
+                    <meta property="og:title" content="Pre Voting" />
+                    <meta property="og:description" content="Early voting, also called pre-poll voting. Created By Vijay Pratap Singh. (+919838111071)" />
+                    <meta property="og:image" content="https://res.cloudinary.com/dyzcjrfca/image/upload/v1646416637/vote-here-sign-arrow-icon-election-concept-election-polling-place-direction-symbol-vector-isolated-white-background-eps-vote-199971490_bftqv4.jpg" />
                     <meta property="og:image:type" content="image/png" />
 
                     <meta property="twitter:card" content="summary_large_image"/>
-                    <meta property="twitter:url" content="https://general-polling.herokuapp.com/"/>
-                    <meta property="twitter:title" content="General Polling"/>
-                    <meta property="twitter:description" content="Please choose who will become CM in UP. Created By Vijay Pratap Singh."/>
-                    <meta property="twitter:image" content="https://res.cloudinary.com/dyzcjrfca/image/upload/v1646415517/Election-Vote-2-icon_n4wj37.png"/>
+                    <meta property="twitter:url" content="https://pre-voting.herokuapp.com"/>
+                    <meta property="twitter:title" content="Pre Voting"/>
+                    <meta property="twitter:description" content="Early voting, also called pre-poll voting. Created By Vijay Pratap Singh (+919838111071)."/>
+                    <meta property="twitter:image" content="https://res.cloudinary.com/dyzcjrfca/image/upload/v1646416637/vote-here-sign-arrow-icon-election-concept-election-polling-place-direction-symbol-vector-isolated-white-background-eps-vote-199971490_bftqv4.jpg"/>
 
                     <link rel="manifest" href="/manifest.json" />
 
