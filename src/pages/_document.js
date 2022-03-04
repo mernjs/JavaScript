@@ -22,14 +22,14 @@ class MyDocument extends Document {
                     <meta property="og:url" content="https://general-polling.herokuapp.com/" />
                     <meta property="og:title" content="General Polling" />
                     <meta property="og:description" content="Please choose who will become CM in UP. Created By Vijay Pratap Singh." />
-                    <meta property="og:image" content="https://res.cloudinary.com/dyzcjrfca/image/upload/v1646413283/images_ug8asw.jpg" />
+                    <meta property="og:image" content="https://res.cloudinary.com/dyzcjrfca/image/upload/v1646415517/Election-Vote-2-icon_n4wj37.png" />
                     <meta property="og:image:type" content="image/png" />
 
                     <meta property="twitter:card" content="summary_large_image"/>
                     <meta property="twitter:url" content="https://general-polling.herokuapp.com/"/>
                     <meta property="twitter:title" content="General Polling"/>
                     <meta property="twitter:description" content="Please choose who will become CM in UP. Created By Vijay Pratap Singh."/>
-                    <meta property="twitter:image" content="https://res.cloudinary.com/dyzcjrfca/image/upload/v1646413283/images_ug8asw.jpg"/>
+                    <meta property="twitter:image" content="https://res.cloudinary.com/dyzcjrfca/image/upload/v1646415517/Election-Vote-2-icon_n4wj37.png"/>
 
                     <link rel="manifest" href="/manifest.json" />
 

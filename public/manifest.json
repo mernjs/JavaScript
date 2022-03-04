@@ -1,6 +1,6 @@
 {
-  "name": "React PWA App",
-  "short_name": "PWA App",
+  "name": "General Polling",
+  "short_name": "General Polling",
   "theme_color": "#4c84ff",
   "background_color": "#4c84ff",
   "display": "standalone",
