@@ -8,11 +8,6 @@ const Home = () => {
     useEffect(() => {
         setTimeout(() => {
             setHeight(window.screen.availHeight)
-            var iframe = document.getElementById('myIframe');
-            var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-            console.log('innerDoc', innerDoc)
-            // elmnt.style.display = "none";
-
         }, 5000)
     }, [])
     return (
