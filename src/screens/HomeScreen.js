@@ -3,7 +3,7 @@ import styled 		from "styled-components";
 
 import StoriesTab 	from "../components/StoriesTab";
 import ChatsTab 	from "../components/ChatsTab";
-import ActiveTab 	from "../components/ActiveTab";
+// import ActiveTab 	from "../components/ActiveTab";
 import CallsTab 	from "../components/CallsTab";
 
 
