@@ -1,5 +1,5 @@
 {
-  "name": "nodeapp",
+  "name": "node-architect",
   "version": "0.1.0",
   "private": true,
   "main": "server.js",
@@ -25,5 +25,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.13"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
