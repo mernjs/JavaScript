@@ -15,20 +15,20 @@ class MyDocument extends Document {
                     <meta charset="utf-8" />
                     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    <meta name="theme-color" content="#000000" />
-                    <meta name="description" content="Early voting, also called pre-poll voting. Created By Vijay Pratap Singh (+91-9838111071)."/>
-                    <title>Pre Voting</title>
+                    <meta name="theme-color" content="#4d83f7" />
+                    <meta name="description" content="General Survey, Created By Vijay Pratap Singh (+91-9838111071)."/>
+                    <title>Survey</title>
                     <meta property="og:type" content="website"/>
                     <meta property="og:url" content="https://pre-voting.herokuapp.com" />
-                    <meta property="og:title" content="Pre Voting" />
-                    <meta property="og:description" content="Early voting, also called pre-poll voting. Created By Vijay Pratap Singh (+91-9838111071)." />
+                    <meta property="og:title" content="Survey" />
+                    <meta property="og:description" content="General Survey, Created By Vijay Pratap Singh (+91-9838111071)." />
                     <meta property="og:image" content="https://res.cloudinary.com/dyzcjrfca/image/upload/v1646416637/vote-here-sign-arrow-icon-election-concept-election-polling-place-direction-symbol-vector-isolated-white-background-eps-vote-199971490_bftqv4.jpg" />
                     <meta property="og:image:type" content="image/png" />
 
                     <meta property="twitter:card" content="summary_large_image"/>
                     <meta property="twitter:url" content="https://pre-voting.herokuapp.com"/>
-                    <meta property="twitter:title" content="Pre Voting"/>
-                    <meta property="twitter:description" content="Early voting, also called pre-poll voting. Created By Vijay Pratap Singh (+919838111071)."/>
+                    <meta property="twitter:title" content="Survey"/>
+                    <meta property="twitter:description" content="General Survey, Created By Vijay Pratap Singh (+919838111071)."/>
                     <meta property="twitter:image" content="https://res.cloudinary.com/dyzcjrfca/image/upload/v1646416637/vote-here-sign-arrow-icon-election-concept-election-polling-place-direction-symbol-vector-isolated-white-background-eps-vote-199971490_bftqv4.jpg"/>
 
                     <link rel="manifest" href="/manifest.json" />

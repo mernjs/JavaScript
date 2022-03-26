@@ -1,8 +1,8 @@
 {
-  "name": "Pre Voting",
-  "short_name": "Pre Voting",
-  "theme_color": "#4c84ff",
-  "background_color": "#4c84ff",
+  "name": "Survey",
+  "short_name": "Survey",
+  "theme_color": "#4d83f7",
+  "background_color": "#4d83f7",
   "display": "standalone",
   "start_url": "/",
   "icons": [
