@@ -18,7 +18,7 @@ export default (props) => {
             <div className="container">
                 <Navbar>
                     <Logo>
-                        <Link href="/"><b>Pre Voting</b></Link> 
+                        <Link href="/"><b>Survey</b></Link> 
                     </Logo>
                     <ul>
                         {/* <li>
