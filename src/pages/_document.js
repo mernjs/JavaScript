@@ -19,14 +19,14 @@ class MyDocument extends Document {
                     <meta name="description" content="General Survey, Created By Vijay Pratap Singh (+91-9838111071)."/>
                     <title>Survey</title>
                     <meta property="og:type" content="website"/>
-                    <meta property="og:url" content="https://pre-voting.herokuapp.com" />
+                    <meta property="og:url" content="https://general-survey.netlify.app" />
                     <meta property="og:title" content="Survey" />
                     <meta property="og:description" content="General Survey, Created By Vijay Pratap Singh (+91-9838111071)." />
                     <meta property="og:image" content="https://res.cloudinary.com/dyzcjrfca/image/upload/v1646416637/vote-here-sign-arrow-icon-election-concept-election-polling-place-direction-symbol-vector-isolated-white-background-eps-vote-199971490_bftqv4.jpg" />
                     <meta property="og:image:type" content="image/png" />
 
                     <meta property="twitter:card" content="summary_large_image"/>
-                    <meta property="twitter:url" content="https://pre-voting.herokuapp.com"/>
+                    <meta property="twitter:url" content="https://general-survey.netlify.app"/>
                     <meta property="twitter:title" content="Survey"/>
                     <meta property="twitter:description" content="General Survey, Created By Vijay Pratap Singh (+919838111071)."/>
                     <meta property="twitter:image" content="https://res.cloudinary.com/dyzcjrfca/image/upload/v1646416637/vote-here-sign-arrow-icon-election-concept-election-polling-place-direction-symbol-vector-isolated-white-background-eps-vote-199971490_bftqv4.jpg"/>
