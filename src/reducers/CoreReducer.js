@@ -5,7 +5,7 @@ const CoreReducer = createSlice({
 
     initialState: {
         loaders: {},
-        is_dark_theme: false,
+        is_dark_theme: true,
     },
   
     reducers: {
