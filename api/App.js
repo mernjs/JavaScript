@@ -32,9 +32,23 @@ Route.route('/api/v1/auth/user')
 	.get(Utilities.verifyAccessToken, AuthController.getUserByID)
 	.all(Utilities.send405);
 
-Route.route('/api/v1/subscription/webhook')
-	.post(Utilities.verifyAccessToken, SubscriptionController.webhook)
+Route.route('/api/v1/subscription/create-token')
+	.post(express.raw({type: 'application/json'}), SubscriptionController.createToken)
 	.all(Utilities.send405);
 
-	
+Route.route('/api/v1/subscription/create-payemnt-method')
+	.post(express.raw({type: 'application/json'}), SubscriptionController.createPaymentMethod)
+	.all(Utilities.send405);
+
+Route.route('/api/v1/subscription/create-subscription')
+	.post(express.raw({type: 'application/json'}), SubscriptionController.createSubscription)
+	.all(Utilities.send405);
+
+Route.route('/api/v1/subscription/confirm-payemnt-intent')
+	.post(express.raw({type: 'application/json'}), SubscriptionController.confirmPaymentIntent)
+	.all(Utilities.send405);
+
+Route.route('/api/v1/subscription/webhook')
+	.post(express.raw({type: 'application/json'}), SubscriptionController.webhook)
+	.all(Utilities.send405);
 module.exports = Route

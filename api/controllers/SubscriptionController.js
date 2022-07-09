@@ -14,7 +14,32 @@ class SubscriptionController {
 
     async createToken(req, res){
         try {
-            Utilities.apiResponse(res, 200, 'Token Has Been Create Successfully!', {...user._doc, accessToken})
+            let { card_number, exp_month, exp_year, cvc } = req.body
+            const card = {
+                number: card_number,
+                exp_month: exp_month,
+                exp_year: exp_year,
+                cvc: cvc,
+            }
+            console.log('createToken ===>>>', card)
+            const token = await stripe.tokens.create({card})
+            Utilities.apiResponse(res, 200, 'Token Has Been Create Successfully!', token)
+        } catch (error) {
+            Utilities.apiResponse(res, 500, error)
+        }
+    }
+
+    async createPaymentMethod(req, res){
+        try {
+            let { card_number, exp_month, exp_year, cvc } = req.body
+            const card = {
+                number: card_number,
+                exp_month: exp_month,
+                exp_year: exp_year,
+                cvc: cvc,
+            }
+            const paymentMethod = await stripe.paymentMethods.create({type: 'card', card});
+            Utilities.apiResponse(res, 200, 'Token Has Been Create Successfully!', paymentMethod)
         } catch (error) {
             Utilities.apiResponse(res, 500, error)
         }
@@ -22,9 +47,31 @@ class SubscriptionController {
 
     async createSubscription(req, res){
         try {
-            Utilities.apiResponse(res, 200, 'Subscription Has Been Created Successfully!', {...data, accessToken})
+            let { email, name, source } = req.body
+            const stripeCustomer = await stripe.customers.create({email, name, source})
+            const planId = 'price_1LHpILDWHqk2O3AcSpuiPATB'
+            const subscription = await stripe.subscriptions.create({
+                customer: stripeCustomer.id,
+                description: "Subscription Purchase",
+                items: [
+                    {price: planId},
+                ],
+                payment_behavior: 'default_incomplete',
+                expand: ['latest_invoice.payment_intent'],
+            })
+            Utilities.apiResponse(res, 200, 'Subscription Has Been Created Successfully!', subscription)
         } catch (error) {
             Utilities.apiResponse(res, 500, error)
+        }
+    }
+
+    async confirmPaymentIntent(req, res){
+        try {
+            let { payment_method, payment_intent } = req.body
+            const paymentIntent = await stripe.paymentIntents.confirm(payment_intent,{payment_method: payment_method})
+            Utilities.apiResponse(res, 200, 'Subscription Has Been Created Successfully!', paymentIntent)
+        } catch (error) {
+            Utilities.apiResponse(res, 500, error.message)
         }
     }
 
