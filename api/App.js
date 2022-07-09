@@ -3,6 +3,8 @@ const express = require('express');
 const Route = express.Router();
 
 const AuthController = require('./controllers/AuthController')
+const SubscriptionController = require('./controllers/SubscriptionController')
+
 /**
  * APIs V1 Routes
  */
@@ -30,4 +32,9 @@ Route.route('/api/v1/auth/user')
 	.get(Utilities.verifyAccessToken, AuthController.getUserByID)
 	.all(Utilities.send405);
 
+Route.route('/api/v1/subscription/webhook')
+	.post(Utilities.verifyAccessToken, SubscriptionController.webhook)
+	.all(Utilities.send405);
+
+	
 module.exports = Route
