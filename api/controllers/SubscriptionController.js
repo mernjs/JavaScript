@@ -88,7 +88,10 @@ class SubscriptionController {
             const endpointSecret = process.env.WEBHOOK_SECRET_KEY
             const sig = req.headers['stripe-signature'];
 
-            console.log('endpointSecret', {endpointSecret, sig})
+            console.log('endpointSecret ===>>>>', endpointSecret,"<<<<<====== endpointSecretEnd")
+            console.log('signature ===>>>>', sig , "<<<<<====== signatureEnd")
+            console.log('req.rawBody ===>>>', req.rawBody,"<<<<<====== rawBodyEnd")
+            console.log('req.body ===>>>', req.body,"<<<<<====== bodyEnd")
             let event;
             try {
                 event = stripe.webhooks.constructEvent(req.rawBody, sig, endpointSecret);
