@@ -15,8 +15,12 @@ nextApp.prepare().then(() => {
     const app 	= express();
 
     app.use(cors())
-    app.use(bodyParser.json({limit: '10mb', extended: true}))
-    app.use(bodyParser.urlencoded({limit: '10mb', extended: true}))
+    app.use(bodyParser.json({
+        verify: (req, res, buf) => {
+          req.rawBody = buf
+        }
+      }))
+    app.use(bodyParser.urlencoded({limit: '10mb', extended: false}))
 
     app.set('view engine', 'ejs');
     app.set('views', path.join(__dirname, './api/views'));
