@@ -91,7 +91,7 @@ class SubscriptionController {
             console.log('endpointSecret', {endpointSecret, sig})
             let event;
             try {
-                event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
+                event = stripe.webhooks.constructEvent(req.rawBody, sig, endpointSecret);
             } catch (err) {
                 console.log('err.message ===>>>', err.message)
                 return Utilities.apiResponse(res, 400, err.message, [])
