@@ -99,13 +99,13 @@ class SubscriptionController {
                 }
                 const payloadString = JSON.stringify(payload, null, 2);
                   
-                const header = stripe.webhooks.generateTestHeaderString({
-                    payload: payloadString,
-                    endpointSecret,
-                });
+                // const header = stripe.webhooks.generateTestHeaderString({
+                //     payload: payloadString,
+                //     endpointSecret,
+                // });
     
                 console.log('payloadString ====>>>>>>>', payloadString, "<<<<<========payloadStringEnd")
-                console.log('header ====>>>>>>>', header, "<<<<<=======headerEnd")
+                console.log('header ====>>>>>>>', payload, "<<<<<=======headerEnd")
             } catch (error) {
                 console.log('generateTestHeaderString ====>>>>>>>', error.message, "<<<<<========generateTestHeaderStringEnd")
             }
@@ -117,7 +117,7 @@ class SubscriptionController {
                     id: req.body.id,
                     object: 'event',
                 }
-                
+
                 const payloadString = JSON.stringify(payload, null, 2);
                   
                 const header = stripe.webhooks.generateTestHeaderString({
