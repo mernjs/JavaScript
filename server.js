@@ -27,7 +27,7 @@ nextApp.prepare().then(() => {
         } else {
           express.json()(req, res, next);
         }
-      });
+    });
       
     app.use(express.static(path.join(__dirname, './public')));
 

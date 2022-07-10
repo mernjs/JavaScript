@@ -94,7 +94,15 @@ class SubscriptionController {
             console.log('req.body ===>>>', req.body,"<<<<<====== bodyEnd")
             let event;
             try {
-                event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
+                const payload = req.body
+                const payloadString = JSON.stringify(payload, null, 2);
+                  
+                const header = stripe.webhooks.generateTestHeaderString({
+                    payload: payloadString,
+                    endpointSecret,
+                });
+
+                event = stripe.webhooks.constructEvent(header, sig, endpointSecret);
             } catch (err) {
                 console.log('err.message ===>>>', err.message)
                 return Utilities.apiResponse(res, 400, err.message, [])
