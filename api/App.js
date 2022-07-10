@@ -50,6 +50,6 @@ Route.route('/api/v1/subscription/confirm-payemnt-intent')
 	.all(Utilities.send405);
 
 Route.route('/api/v1/subscription/webhook')
-	.post(bodyParser.raw({type: 'application/json'}), SubscriptionController.webhook)
+	.post(express.raw({type: 'application/json'}), SubscriptionController.webhook)
 	.all(Utilities.send405);
 module.exports = Route

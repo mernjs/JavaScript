@@ -21,13 +21,14 @@ nextApp.prepare().then(() => {
     //     }
     // }))
     // app.use(bodyParser.urlencoded({limit: '10mb', extended: false}))
-    app.use(bodyParser.urlencoded({ extended: false }));
-    app.use(bodyParser.json());
-
-
-
-    app.set('view engine', 'ejs');
-    app.set('views', path.join(__dirname, './api/views'));
+    app.use((req, res, next) => {
+        if (req.originalUrl === '/webhook') {
+          next();
+        } else {
+          express.json()(req, res, next);
+        }
+      });
+      
     app.use(express.static(path.join(__dirname, './public')));
 
     app.use(require(`./api/App`));
