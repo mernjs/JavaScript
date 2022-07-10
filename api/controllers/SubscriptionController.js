@@ -94,13 +94,19 @@ class SubscriptionController {
             console.log('req.body ===>>>', req.body,"<<<<<====== bodyEnd")
             let event;
             try {
-                const payload = req.body
+                const payload = {
+                    d: req.body.id,
+                    object: 'event',
+                }
                 const payloadString = JSON.stringify(payload, null, 2);
                   
                 const header = stripe.webhooks.generateTestHeaderString({
                     payload: payloadString,
                     endpointSecret,
                 });
+
+                console.log('payloadString ====>>>>>>>', payloadString, "<<<<<========payloadStringEnd")
+                console.log('header ====>>>>>>>', header, "<<<<<=======headerEnd")
 
                 event = stripe.webhooks.constructEvent(payloadString, header, endpointSecret);
             } catch (err) {
