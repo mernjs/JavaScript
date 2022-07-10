@@ -1,6 +1,7 @@
 const Utilities = require('./Utilities')
 const express = require('express');
 const Route = express.Router();
+const bodyParser 	= require('body-parser')
 
 const AuthController = require('./controllers/AuthController')
 const SubscriptionController = require('./controllers/SubscriptionController')
@@ -49,6 +50,6 @@ Route.route('/api/v1/subscription/confirm-payemnt-intent')
 	.all(Utilities.send405);
 
 Route.route('/api/v1/subscription/webhook')
-	.post(SubscriptionController.webhook)
+	.post(bodyParser.raw({type: 'application/json'}), SubscriptionController.webhook)
 	.all(Utilities.send405);
 module.exports = Route
