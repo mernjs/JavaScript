@@ -30,6 +30,10 @@ Route.route('/api/v1/auth/user')
 	.get(Utilities.verifyAccessToken, AuthController.getUserDetails)
 	.all(Utilities.send405);
 
+Route.route('/api/v1/crud/users')
+	.get(CrudController.getAllUsers)
+	.all(Utilities.send405);
+
 Route.route('/api/v1/crud/user')
 	.post(CrudController.create)
 	.all(Utilities.send405);
@@ -44,10 +48,6 @@ Route.route('/api/v1/crud/user/:user_id')
 
 Route.route('/api/v1/crud/user/:user_id')
 	.delete(CrudController.delete)
-	.all(Utilities.send405);
-
-Route.route('/api/v1/crud/user/:user_id')
-	.get(CrudController.getUserByID)
 	.all(Utilities.send405);
 
 Route.route('/api/v1/subscription/create-token')

@@ -22,8 +22,8 @@ class AuthController {
 
     async read(req, res){
         try {
-            const users = await User.find()
-            Utilities.apiResponse(res, 200, 'Get Users Successfully', users)
+            const user = await User.findOne({_id: req.params.user_id})
+            Utilities.apiResponse(res, 200, 'Get User Details Successfully', user)
         } catch (error) {
             Utilities.apiResponse(res, 500, error)
         }
@@ -31,8 +31,8 @@ class AuthController {
 
     async update(req, res){
         try {
-            const users = await User.findOneAndUpdate({_id: req.params.user_id}, req.body)
-            Utilities.apiResponse(res, 200, 'User Has Been Updated Successfully', users)
+            await User.findOneAndUpdate({_id: req.params.user_id}, req.body)
+            Utilities.apiResponse(res, 200, 'User Has Been Updated Successfully')
         } catch (error) {
             Utilities.apiResponse(res, 500, error)
         }
@@ -40,17 +40,17 @@ class AuthController {
 
     async delete(req, res){
         try {
-            const users = await User.find({_id: req.params.user_id}).remove().exec();
-            Utilities.apiResponse(res, 200, 'User Deleted Successfully', users)
+            await User.find({_id: req.params.user_id}).remove().exec();
+            Utilities.apiResponse(res, 200, 'User Deleted Successfully')
         } catch (error) {
             Utilities.apiResponse(res, 500, error)
         }
     }
 
-    async getUserByID(req, res){
+    async getAllUsers(req, res){
         try {
-            const user = await User.findOne({_id: req.params.user_id})
-            Utilities.apiResponse(res, 200, 'Get User Details Successfully', user)
+            const users = await User.find()
+            Utilities.apiResponse(res, 200, 'Get Users Successfully', users)
         } catch (error) {
             Utilities.apiResponse(res, 500, error)
         }
