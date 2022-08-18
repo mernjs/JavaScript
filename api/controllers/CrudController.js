@@ -31,6 +31,8 @@ class AuthController {
 
     async update(req, res){
         try {
+            const doesExist = await User.findOne({ email: req.body.email })
+            if (doesExist) return Utilities.apiResponse(res, 422, 'Email is already been registered')
             await User.findOneAndUpdate({_id: req.params.user_id}, req.body)
             Utilities.apiResponse(res, 200, 'User Has Been Updated Successfully')
         } catch (error) {
