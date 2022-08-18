@@ -4,6 +4,7 @@ const Route = express.Router();
 const bodyParser 	= require('body-parser')
 
 const AuthController = require('./controllers/AuthController')
+const CrudController = require('./controllers/CrudController')
 const SubscriptionController = require('./controllers/SubscriptionController')
 
 /**
@@ -25,12 +26,28 @@ Route.route('/api/v1/auth/signup')
 	.post(AuthController.signup)
 	.all(Utilities.send405);
 
-Route.route('/api/v1/auth/users')
-	.get(Utilities.verifyAccessToken, AuthController.users)
+Route.route('/api/v1/auth/user')
+	.get(Utilities.verifyAccessToken, AuthController.getUserDetails)
 	.all(Utilities.send405);
 
-Route.route('/api/v1/auth/user')
-	.get(Utilities.verifyAccessToken, AuthController.getUserByID)
+Route.route('/api/v1/crud/user')
+	.post(CrudController.create)
+	.all(Utilities.send405);
+
+Route.route('/api/v1/crud/user')
+	.get(CrudController.read)
+	.all(Utilities.send405);
+
+Route.route('/api/v1/crud/user/:user_id')
+	.put(CrudController.update)
+	.all(Utilities.send405);
+
+Route.route('/api/v1/crud/user/:user_id')
+	.delete(CrudController.delete)
+	.all(Utilities.send405);
+
+Route.route('/api/v1/crud/user/:user_id')
+	.get(CrudController.getUserByID)
 	.all(Utilities.send405);
 
 Route.route('/api/v1/subscription/create-token')

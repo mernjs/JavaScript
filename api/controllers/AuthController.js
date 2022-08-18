@@ -36,18 +36,9 @@ class AuthController {
         }
     }
 
-    async users(req, res){
+    async getUserDetails(req, res){
         try {
-            const users = await User.find()
-            Utilities.apiResponse(res, 200, 'Get Users Successfully', users)
-        } catch (error) {
-            Utilities.apiResponse(res, 500, error)
-        }
-    }
-
-    async getUserByID(req, res){
-        try {
-            const user = await User.findOne({_id: req.query.user_id})
+            const user = await User.findOne({_id: req.payload._id})
             Utilities.apiResponse(res, 200, 'Get User Details Successfully', user)
         } catch (error) {
             Utilities.apiResponse(res, 500, error)
