@@ -1,0 +1,534 @@
+.sticky {
+	display: block;
+}
+
+body {
+	background: #f7f8f8;
+}
+
+body.single {
+	.post {
+		margin: 0 0 20px;
+	}
+	.navigation {
+		margin: 30px 0 50px;
+	}
+	.entry-footer {
+		margin-top: 20px;
+	}
+} 
+
+body.sticky-header-enabled {
+	.site-header {
+		position: fixed;
+		width: 100%;
+		z-index: 9999;
+		@include box-shadow(0px 1px 10px 0px rgba(0,0,0,0.06));
+		@include for-size(phone-only) {
+			position: static;
+		}
+	}
+}
+
+body.sidebar-layout-left-sidebar {
+	#primary {
+		float: right;
+		margin-right: 0;
+		margin-left: 30px;
+	}
+}
+
+.post {
+	margin: 0 0 50px;
+}
+
+.content-article-wrap {
+	background: $color_body;
+	box-shadow: 0 0 26px #eaeaea9e;
+	padding: 30px;
+	.post-excerpt {
+		p {
+			margin: 0;
+			a {
+				display: block;
+				margin-top: 8px;
+				color: $color_screen;
+				&:hover {
+					color: $color_title;
+				}
+				&:focus {
+					color: $color_title;
+					outline: 1px dotted $color_title;
+				}
+				.arrow-more {
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+}
+
+.post-thumbnail {
+	img {
+		display: block;
+	}
+}
+
+.post-content-wrap {
+	background: $color_body;
+	padding: 30px;
+}
+
+.featured-image-active {
+	@include flexbox(true, flex-start, flex-start);
+	@include for-size(phone-only) {
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+	.thumb-wrap {
+		-webkit-flex: 1.3;
+		    -ms-flex: 1.3;
+		        flex: 1.3;
+	    margin-right: 20px;
+	    @include for-size(phone-only) {
+	    	flex: auto;
+	    	width: 100%;
+	    	margin-right: 0;
+	    	margin-bottom: 15px;
+	    }
+	    img {
+	    	@include for-size(phone-only) {
+	    		width: 100%;
+	    	}
+	    }
+	}
+	.content-wrap {
+		-webkit-flex: 2;
+		    -ms-flex: 2;
+		        flex: 2;
+	    @include for-size(phone-only) {
+	    	flex: auto;
+	    	width: 100%;
+	    }
+	}
+}
+
+.artblog-slider {
+	position: relative;
+	margin-bottom: 50px;
+	
+	.carousel-arrow {
+		cursor: pointer;
+		&:focus {
+			outline: 1px dotted $color_body;
+		}
+	}
+	.left-arrow {
+		position: absolute;
+	    top: 50%;
+	    transform: translate(0, -50%);
+	    left: 20px;
+	    z-index: 1;
+	    font-size: 35px;
+	    color: $color_body;
+	}
+	.right-arrow {
+		position: absolute;
+	    top: 50%;
+		transform: translate(0, -50%);
+	    right: 20px;
+	    z-index: 1;
+	    font-size: 35px;
+	    color: $color_body;
+	}
+
+	.slide-item-inner {
+		position: relative;
+	}
+
+	.slide-item-thumb {
+		position: relative;
+		&::before {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(rgba(255,255,255,0.1), rgba(0,0,0,0.8));
+			width: 100%;
+			height: 100%;
+		}
+		img {
+			@include for-size(phone-only) {
+				display: block;
+				width: 100%;
+				height: 300px;
+				object-fit: cover;
+			}
+		}
+	}
+}
+.slide-item-content-wrap {
+	position: absolute;
+	width: 100%;
+	bottom: 40px;
+	padding: 0 20px;
+    text-align: center;
+    .title {
+    	margin-bottom: 10px;
+    	a {
+    		color: $color_body;
+    		&:focus {
+    			outline: 1px dotted $color_body;
+    		}
+    	}
+    }
+    .entry-meta {
+    	a {
+    		color: $color_body;
+    	}
+    	span {
+    		margin-right: 15px;
+    		&::before {
+    			color: $color_body;
+    		}
+    		a {
+    			&:hover
+    			 {
+    				color: $color_body;
+    			}
+    			&:focus
+    			 {
+    			 	color: $color_body;
+    				outline: 1px dotted $color_body;
+    			}
+    		}
+    	}
+    }
+    .entry-cat-meta {
+    	.cat-links{
+    		.artblog-cat:focus {
+    			outline: 1px dotted #fff;
+    		}
+    	} 
+    }
+}
+body.page article {
+	margin: 0 0 60px;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+span.posted-on {
+	position: relative;
+	color: $color_paragraph;
+	font-size: $font_size_meta;
+	@include transition(all, linear, 0.3s);
+	&::before {
+		margin-right: 6px;
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "\f073";
+	}
+	&:hover,
+	&:focus {
+		color: $color_screen;
+	}
+	a {
+		color: $color_paragraph;
+		@include transition(all, linear, 0.3s);
+		&:hover,
+		&:focus {
+			color: $color_screen;
+		}
+	}
+}
+
+span.byline {
+	position: relative;
+	color: $color_paragraph;
+	font-size: $font_size_meta;
+	@include transition(all, linear, 0.3s);
+	&:hover,
+	&:focus {
+		color: $color_screen;
+	}
+	&::before {
+		margin-right: 2px;
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "\f007";
+	}
+	a {
+		color: $color_paragraph;
+		@include transition(all, linear, 0.3s);
+		&:hover,
+		&:focus {
+			color: $color_screen;
+		}
+	}
+	span.author {
+		margin-right: 0;
+	}
+}
+
+span.edit-link {
+	position: relative;
+	color: $color_paragraph;
+	font-size: $font_size_meta;
+	@include transition(all, linear, 0.3s);
+	&:hover,
+	&:focus {
+		color: $color_screen;
+	}
+	&::before {
+		margin-right: 6px;
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "\f044";
+		font-size: $font_size_meta_icon;
+	}
+	a {
+		display: inline-block;
+		position: relative;
+		top: 1px;
+		color: $color_paragraph;
+		@include transition(all, linear, 0.3s);
+		&:hover,
+		&:focus {
+			color: $color_screen;
+		}
+	}
+}
+
+span.comments-link {
+	position: relative;
+	color: $color_paragraph;
+	font-size: $font_size_meta;
+	@include transition(all, linear, 0.3s);
+	&:hover,
+	&:focus {
+		color: $color_screen;
+	}
+	&::before {
+		margin-right: 6px;
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "\f075";
+	}
+	a {
+		color: $color_paragraph;
+		@include transition(all, linear, 0.3s);
+		&:hover,
+		&:focus {
+			color: $color_screen;
+		}
+	}
+}
+
+span.tags-links {
+	position: relative;
+	color: $color_paragraph;
+	font-size: $font_size_meta;
+	@include transition(all, linear, 0.3s);
+	&:hover,
+	&:focus {
+		color: $color_screen;
+	}
+	&::before {
+		margin-right: 6px;
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "\f02b";
+	}
+	a {
+		color: $color_paragraph;
+		@include transition(all, linear, 0.3s);
+		&:hover,
+		&:focus {
+			color: $color_screen;
+		}
+	}
+}
+
+.entry-cat-meta {
+	margin-bottom: 5px;
+}
+
+span.cat-links .artblog-cat {
+	position: relative;
+	display: inline-block;
+	background: $color_cat_bg;
+	padding: 6px 10px;
+	margin-right: 5px;
+	color: $color_body;
+	font-size: $font_size_meta;
+	margin-bottom: 5px;
+	&::before {
+		content: "#";
+
+	}
+	&:hover {
+		background: $color-title;
+	}
+	&:focus {
+		outline: 1px dotted $color_title;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.entry-title {
+	font-size: $font_size_title;
+	color: $color_title;
+	line-height: 1.3;
+	margin-bottom: 10px;
+	font-family: $font_family_heading;
+	@include transition(all, linear, 0.2s);
+	a{
+		color: $color_title;
+		&:hover,
+		&:focus {
+			color: $color_screen;
+		}
+	}
+}
+
+.entry-header {
+	margin-bottom: 15px;
+	.entry-title {
+		font-size: $font_size_heading;
+	    margin-bottom: 15px;
+	    line-height: 1.3;
+		@include for-size(phone-only) {
+			font-size: $font_size_title;
+		}
+	}
+	.entry-meta {
+		span {
+			margin-right: 18px;
+			@include for-size(phone-only) {
+				display: inline-block;
+				margin-bottom: 4px;
+			}
+			&::before {
+				font-size: $font_size_meta_icon;
+			}
+		}
+	}
+}
+
+.entry-content {
+	margin: 15px 0 0;
+	ul,ol {
+		margin: 0;
+		margin-bottom: 15px;
+		padding: 0 18px;
+	}
+	ul,ol {
+		ul,ol {
+			padding-left: 25px;
+		}
+	}
+	p {
+		margin-bottom: 12px;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		margin-bottom: 15px;
+	}
+}
+
+.single {
+	.entry-content {
+		h1,h2,h3,h4,h5,h6 {
+			margin: 40px 0 15px 0;
+		}
+		p {
+			margin-bottom: 20px;
+		}
+		figure {
+			margin-top: 20px;
+		}
+	}
+
+}
+
+.entry-footer {
+	
+	span {
+		margin-right: 15px;
+	}
+}
+
+#primary {
+	float: left;
+    width: 68%;
+    margin-right: 30px;
+    @include for-size(tablet-portrait-up) {
+    	width: 100%;
+    	float: none;
+    	margin-right: 0;
+    }
+    @include for-size(phone-only) {
+    	width: 100%;
+    	float: none;
+    	margin-right: 0;
+    }
+}
+
+.page-template-full-width,
+.post-template-full-width {
+	#primary {
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+}
+
+.post-password-form {
+	input[type="password"] {
+		padding: 9px 13px;
+	    color: $color_title;
+	    border-radius: 0;
+	    font-weight: 300;
+	    margin-right: -5px;
+	}
+}
+
+.page-links {
+    clear: both;
+	margin-top: 15px;
+    display: inline-block;
+    width: 100%;
+}
+
+.more-link {
+	position: relative;
+	display: inline-block;
+	&::after {
+		float: right;
+		margin-left: 15px;
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "\f30b";
+	}
+}

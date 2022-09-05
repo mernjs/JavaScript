@@ -1,0 +1,46 @@
+/*!
+Theme Name: Artblog
+Theme URI: https://ithemer.com/themes/artblog/
+Author: WP Concern
+Author URI: https://ithemer.com/
+Description: Artblog is a minimalist WordPress theme for personal, travel, fashion and all type of blogging websites. Additionally, it is a perfect feminine WordPress theme that comes with color options, slider and more. This simple blog theme is SEO ready and speed optimized which helps you to rank your website at the top of search engines. Artblog is the best responsive theme for bloggers, it has a perfect layout for all types of devices including desktop, smartphones, tablets, iPads, etc.
+Version: 2.0.1
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: artblog
+Tags: blog, one-column, two-columns, right-sidebar, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+// utilities
+@import "utilities/variables";
+@import "utilities/mixins";
+
+// base
+@import "base/normalize";
+@import "base/typography";
+@import "base/elements";
+
+// helpers
+@import "helpers/clearings";
+@import "helpers/links";
+@import "helpers/buttons";
+@import "helpers/accssibility";
+@import "helpers/alignment";
+
+// layout
+@import "layout/archive";
+@import "layout/block";
+@import "layout/comments";
+@import "layout/container";
+@import "layout/content";
+@import "layout/footer";
+@import "layout/forms";
+@import "layout/header";
+@import "layout/media";
+@import "layout/navigation";
+@import "layout/notfound";
+@import "layout/pagination";
+@import "layout/widgets";

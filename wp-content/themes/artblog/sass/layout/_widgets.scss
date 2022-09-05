@@ -1,0 +1,446 @@
+.widget {
+	margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+	padding: 3px;
+	@include for-size(phone-only) {
+		width: 100%;
+	}
+}
+
+#secondary {
+	float: left;
+    width: calc(100% - (68% + 30px));
+	// padding: 25px;
+	margin-bottom: 50px;
+    // box-shadow: 0 0 26px $color_secondary_box_shadow;
+
+    @include for-size(tablet-portrait-up) {
+    	width: 100%;
+    	float: none;
+    	-webkit-box-shadow: none;
+		box-shadow: none;
+		padding: 0;
+		margin-top: 60px;
+    }
+    @include for-size(phone-only) {
+    	width: 100%;
+    	float: none;
+    	-webkit-box-shadow: none;
+		box-shadow: none;
+		padding: 0;
+		margin-top: 60px;
+    }
+    .widget {
+		padding: 30px;
+		background: $color_body;
+	    box-shadow: 0 0 26px $color_secondary_box_shadow;
+    }
+    .widget-title {
+        padding-bottom: 8px;
+        border-bottom: 1px dashed #b5b5b5;
+    }
+}
+
+.widget-area {
+	.widget {
+    	ul {
+    		margin: 0;
+    		padding: 0 18px;
+    		li {
+    			margin-bottom: 6px;
+    			a {
+    				color: $color_title;
+    				&:hover,
+    				&:focus {
+    					color: $color_screen;
+    				}
+    			}
+    		}
+    	}
+    }
+}
+
+.widget-area {
+	.widget {
+		ul {
+			padding: 0;
+			list-style-type: none;
+			li {
+				position: relative;
+				margin-left: 15px;
+				&::before {
+					font-family: "Font Awesome 5 Free";
+					font-size: $font_size_meta_icon - 3;
+					color: $color_title;
+					font-weight: 900;
+					position: absolute;
+					top: 0;
+					left: -15px;
+					content: "\f054";
+				}
+				
+			}
+		}
+	}
+	.widget_recent_entries {
+		ul {
+			li {
+				.post-date {
+					&::before {
+						content: "/";
+						margin: 0 6px 0 3px;
+					}
+				}
+			}
+		}
+	}
+	.artblog_widget_social {
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			@include flex;
+			-webkit-flex-wrap: wrap;
+			    -ms-flex-wrap: wrap;
+			        flex-wrap: wrap;
+			li {
+				margin-left: 0;
+				&::before {
+					display: none;
+				}
+				a {
+					position: relative;
+					color: $color_title;
+					line-height: 1;
+					@include transition(all, linear, 0.3s)
+					&::before {
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						content: "\f0c1";
+					}
+					&:hover,
+					&:focus {
+						color: $color_screen;
+					}
+				}
+				a[href*="twitter.com"]::before {
+					content: "\f099";
+					font-family: "Font Awesome 5 Brands";
+				}
+				a[href*="facebook.com"]::before {
+				    content: "\f39e";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="linkedin.com"]::before {
+				    content: "\f0e1";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="google.com"]::before {
+				    content: "\f1a0";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="youtube.com"]::before {
+				    content: "\f167";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="dribbble.com"]::before {
+				    content: "\f17d";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="pinterest.com"]::before {
+				    content: "\f0d2";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="bitbucket.org"]::before {
+				    content: "\f171";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="github.com"]::before {
+				    content: "\f113";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="codepen.io"]::before {
+				    content: "\f1cb";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="flickr.com"]::before {
+				    content: "\f16e";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href$="/feed/"]::before {
+				    content: "\f09e";
+				}
+
+				a[href*="foursquare.com"]::before {
+				    content: "\f180";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="instagram.com"]::before {
+				    content: "\f16d";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="tumblr.com"]::before {
+				    content: "\f173";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="reddit.com"]::before {
+				    content: "\f1a1";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="vimeo.com"]::before {
+				    content: "\f194";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="digg.com"]::before {
+				    content: "\f1a6";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="twitch.tv"]::before {
+				    content: "\f1e8";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="stumbleupon.com"]::before {
+				    content: "\f1a4";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="delicious.com"]::before {
+				    content: "\f1a5";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="mailto:"]::before {
+				    content: "\f0e0";
+				}
+
+				a[href*="soundcloud.com"]::before {
+				    content: "\f1be";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="wordpress.org"]::before {
+				    content: "\f19a";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="wordpress.com"]::before {
+				    content: "\f19a";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="jsfiddle.net"]::before {
+				    content: "\f1cc";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="tripadvisor.com"]::before {
+				    content: "\f262";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="angel.co"]::before {
+				    content: "\f209";
+				    font-family: "Font Awesome 5 Brands";
+				}
+
+				a[href*="slack.com"]::before {
+				    content: "\f198";
+				    font-family: "Font Awesome 5 Brands";
+				}
+			}
+			li:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+	}
+}
+
+.widget-title {
+	position: relative;
+	font-family: $font_family_heading;
+	font-size: $font_size_title;
+    color: $color_title;
+    line-height: 28px;
+    margin-bottom: 18px;
+}
+
+.widget_calendar {
+	table {
+		caption {
+			font-size: $font_size_paragraph;
+			margin-bottom: 7px;
+			color: $color_title;
+		}
+	}
+}
+
+.widget_nav_menu {
+	.menu {
+		li {
+			.sub-menu {
+				.sub-menu {
+					.sub-menu {
+						.sub-menu {
+							margin: 0;
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.widget_search {
+	.search-form {
+		position: relative;
+		.search-field {
+			padding: 10px 12px;
+			padding: 10px 110px 10px 12px;
+    		width: 100%;
+		}
+		.search-submit {
+			position: absolute;
+		    right: 0;
+		    top: 0;
+		    border: 1px solid $color_screen;
+		    box-shadow: 0 0 20px lighten($color_screen, 50%);
+		}
+	}
+}
+
+.widget_tag_cloud {
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		li {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+}
+.widget-area {
+	.widget_tag_cloud {
+		ul {
+			padding: 0;
+		}
+	}
+}
+
+.artblog_widget_author {
+	.author-image {
+		img {
+			display: block;
+			width: 150px;
+			height: 150px;
+			border: 8px solid rgba(0,0,0,0.050);
+			border-radius: 50%;
+			margin: 0 auto;
+		}
+	}
+	.author-details {
+		text-align: center;
+		margin-top: 15px;
+		.author-name {
+			margin-bottom: 9px;
+			a {
+				display: block;
+				font-size: $font_size_title;
+				color: $color_title;
+				&:hover,
+				&:focus {
+					color: $color_screen;
+				}
+			}
+		}
+		.author-social-links {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			@include flexbox(true, center, center);
+			li {
+				a {
+					color: $color_title;
+					&:hover,
+					&:focus {
+						color: $color_screen;
+					}
+				}
+				&::before {
+					display: none;
+				}
+			}
+			li:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+.artblog_widget_recent_posts_advanced {
+	.recent-posts-wrapper {
+		.recent-posts-item {
+			margin-bottom: 30px;
+		    padding-bottom: 20px;
+		    border-bottom: 1px solid #e5e5e5;
+			.recent-posts-item-inner {
+				.recent-posts-item-thumb {
+					margin-right: 10px;
+				}
+				.recent-posts-item-content-wrap {
+					.recent-posts-item-title {
+						margin-bottom: 10px;
+						line-height: 1;
+						a {
+							font-size: $font_size_paragraph;
+							color: $color_title;
+							&:hover,
+							&:focus {
+								color: $color_screen;
+							}
+						}
+					}
+					.entry-cat-meta {
+						margin-bottom: 2px;
+						.artblog-cat {
+							font-size: 12px;
+							padding: 6px;
+						}
+					}
+				}
+			}
+		}
+		.recent-posts-item:last-child {
+			border: none;
+		    margin: 0;
+		}
+		.featured-image-active {
+			.recent-posts-item-inner {
+				@include flexbox(true, flex-start, flex-start);
+			}
+		}
+	}
+}

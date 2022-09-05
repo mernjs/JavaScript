@@ -1,0 +1,48 @@
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 22px;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 22px;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignnone{
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+}
+
+.alignfull {
+    width: 100vw;
+    margin-left: calc( 50% - 50vw );
+    max-width: none;
+}
+
+.alignwide {
+    width: 75vw;
+    margin-left: 50%;
+    max-width: none;
+    transform: translate(-50%, 0);
+}
+
+.entry-content {
+    .alignwide {
+        margin-left: 50%;
+    }
+}
+
+ 

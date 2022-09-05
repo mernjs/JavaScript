@@ -1,0 +1,33 @@
+// color
+$color_body: #ffffff;
+$color_screen: #f16334;
+$color_hover: darken($color_screen, 10%);
+$color_title: #4d4d4d;
+$color_link: #f16334;
+$color_cat_bg: #f16334;
+$color_link_hover: darken($color_screen, 10%);
+$color_paragraph: #707070;
+$color_border_bottom: #e0e0e0;
+$color_box_shadow: #b8b8b89e;
+$color_secondary_box_shadow: #eaeaea9e;
+$color_comment_area: #ececec;
+$color_entry_meta: #9d9d9d;
+$color_footer: #333;
+$font_family_heading: 'Muli';
+$font_family_content: 'Muli';
+
+// fonts
+$font_size_meta_icon: 12px;
+$font_size_meta: 14px;
+$font_size_paragraph: 16px;
+$font_size_main_menu: 16px;
+$font_size_title: 20px;
+$font_size_navigation_arrow: 22px;
+$font_size_heading: 26px;
+$font_size_site_title: 34px;
+$font_size_h1: 32px;
+$font_size_h2: 26px;
+$font_size_h3: 20px;
+$font_size_h4: 18px;
+$font_size_h5: 14px;
+$font_size_h6: 14px;

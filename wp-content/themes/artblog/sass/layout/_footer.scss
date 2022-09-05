@@ -1,0 +1,166 @@
+#footer-widgets {
+	width: 100%;
+	float: left;
+	background: $color_footer;
+	padding: 50px 0 30px;
+	margin-top: 50px;
+	.widget {
+		margin-bottom: 20px;
+		.search-form {
+			.search-submit {
+			    box-shadow: 0 0 8px $color_hover;
+			}
+		}
+		figcaption {
+			color: $color_body;
+		}
+	}
+	.widget-title {
+		color: $color_body;
+	}
+	ul {
+		li {
+			position: relative;
+			color: $color_body;
+			a {
+				color: $color_body;
+				&:focus {
+					outline: 1px dotted $color_body;
+				}
+			}
+			&::before {
+				color: $color_body;
+			}
+		}
+	}
+	.textwidget {
+		p {
+			color: $color_body;
+		}
+	}
+
+	// .inner-wrapper {
+	// 	.widget-column {
+	// 		@include for-size(tablet-portrait-up) {
+	// 			grid-column: auto;
+	// 		}
+	// 		@include for-size(phone-only) {
+	// 			grid-column: auto;
+	// 		}
+	// 	}
+	// }
+	.artblog_widget_social {
+		ul {
+			li {
+				a {
+					color: $color_body;
+				}
+			}
+		}
+	}
+	.widget_categories,
+	.widget_recent_entries,
+	.widget_recent_comments {
+		ul {
+			li {
+				&::before {
+					color: $color_body;
+				}
+			}
+		} 
+	}
+	.widget_calendar {
+		.widget-title,
+		table caption,
+		table tr,
+		table td,
+		table th
+		 {
+			color: $color_body;
+		}
+	}
+}
+
+.site-footer {
+	float: left;
+	width: 100%;
+	background: darken($color_footer, 10%);
+	padding: 20px 0;
+	font-size: $font_size_paragraph;
+	color: $color_body;
+	@include for-size(phone-only) {
+		text-align: center;
+	}
+	.copyright {
+		float: left;
+		@include for-size(phone-only) {
+			float: none;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+	}
+	.site-info {
+		float: right;
+		@include for-size(phone-only) {
+			float: none;
+			text-align: center;
+		}
+		a {
+			color: $color_body;
+			&:hover {
+				text-decoration: underline;
+			}
+			&:focus {
+				outline: 1px dotted $color_body;
+			}
+		}
+	}
+	.col-2 {
+		@include for-size(phone-only) {
+			grid-gap: 15px;
+		}
+	}
+}
+
+/* scrollup */
+.scrollup {
+	display: none;
+	background-color: $color_screen;
+	color: $color_body;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border-radius: 2px;
+	z-index: 99999;
+	&:visited {
+		display: none;
+		background-color: darken($color_screen, 30%);;
+		color: $color_body;
+		width: 40px;
+		height: 40px;
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		border-radius: 2px;
+		z-index: 99999;
+	}
+	&.scrollup-show {
+		display: block;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($color_hover, 10%);
+		color: $color_body;
+	}
+	&::after {
+		font-family: "Font Awesome 5 Free";
+		font-weight: 900;
+		content: "\f077";
+		height: 100%;
+		color: $color_body;
+		@include flexbox(true, center, center)
+	}
+}

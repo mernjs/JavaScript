@@ -1,0 +1,106 @@
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+.comments-area {
+	// background: $color_comment_area;
+	// padding: 30px;
+	margin: 0 0 30px;
+	@include for-size(phone-only) {
+		padding: 15px;
+		margin-top: 30px;
+	}
+	.comment-reply-title {
+		font-size: $font_size_heading;
+		color: $color_title;
+		margin-bottom: 6px;
+	}
+	.comment-form {
+		input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="num"],
+		input[type="password"],
+		input[type="tel"],
+		textarea {
+			width: 100%;
+			color: $color_title;
+			padding: 10px 16px;
+			background: $color_body;
+			border: none;
+			-webkit-border-radius: 0;
+			border-radius: 0;
+		}
+		label {
+			display: block;
+		}
+		label[for="wp-comment-cookies-consent"] {
+			display: inline-block;
+			font-size: $font_size_paragraph;
+		}
+	}
+	>ol {
+		padding: 0;
+	}
+	ol {
+		list-style-type: none;
+		li {
+			font-size: $font_size_meta;
+			margin-bottom: 22px;
+			.comment-body {
+				background: $color_body;
+				padding: 30px;
+				margin-bottom: 30px;
+				.comment-meta {
+					margin-bottom: 10px;
+				}
+				.comment-author {
+					font-size: $font_size_paragraph + 2;
+					margin-bottom: -7px;
+					img {
+						float: left;
+						margin: 7px 12px 0px 0;
+					}
+				}
+				.comment-metadata {
+					a {
+						color: $color_title;
+						&:focus {
+							color: $color_screen;
+						}
+					}
+				}
+				.edit-link {
+					margin-left: 10px;
+					&::before {
+						position: static;
+						margin-right: 4px;
+					}
+				}
+
+				.comment-content {
+					p {
+						// font-size: $font_size_paragraph;
+					}
+				}
+				.reply {
+					a {
+						a {
+							color: $color_title;
+							&:focus {
+								color: $color_screen;
+							}
+						}
+					}
+				}
+			}			
+		}
+		ol.childern {
+			margin-top: 10px;
+		}
+	}
+}

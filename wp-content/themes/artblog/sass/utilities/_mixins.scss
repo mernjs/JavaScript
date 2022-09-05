@@ -1,0 +1,102 @@
+// flex
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+// flexbox
+@mixin flexbox ($item, $align-item, $justify-content, $flex-direction: row) {
+  @if $item == true {
+    @include flex;
+  }
+  @if $align-item != "" {
+    -ms-flex-align: $align-item;
+    -moz-align-items: $align-item;
+    -o-align-items: $align-item;
+    align-items: $align-item;
+  }
+  @if $justify-content != "" {
+    -ms-justify-content: $justify-content;
+    -moz-justify-content: $justify-content;
+    -o-justify-content: $justify-content;
+    justify-content: $justify-content;
+  }
+  -ms-flex-direction: $flex-direction;
+  -moz-flex-direction: $flex-direction;
+  -o-flex-direction: $flex-direction;
+  flex-direction: $flex-direction; 
+}
+
+// transition
+@mixin transition ($property...) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -ms-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}
+
+// transform
+@mixin transform ($value...) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+  transform: $value;
+}
+
+// border-radius
+@mixin border-radius($radius...) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// box-shadow
+@mixin box-shadow ($shadow...) {
+  -webkit-box-shadow : $shadow;
+  -moz-box-shadow : $shadow;
+  -ms-box-shadow : $shadow;
+  -o-box-shadow : $shadow;
+  box-shadow : $shadow;
+}
+
+// links
+@mixin links ($color, $outline, $text-decoration) {
+  color: $color;
+  outline: $outline;
+  text-decoration: $text-decoration;
+}
+
+
+// Clearfix
+@mixin clearfix() {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+// 
+@mixin clearfix-after() {
+  clear: both;
+}
+
+// 
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 767px) { @content; }
+  } 
+  @else if $size == tablet-portrait-up {
+    @media (min-width: 768px) and (max-width: 1023px) { @content; }
+  } 
+  @else if $size == tablet-landscape-up {
+    @media (max-width: 1024px) { @content; }
+  } 
+  @else if $size == desktop-up {
+    @media (max-width: 1199px) { @content; }
+  }
+}

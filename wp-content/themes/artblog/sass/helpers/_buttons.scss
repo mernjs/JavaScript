@@ -1,0 +1,17 @@
+.btn {
+	display: inline-block;
+	width: auto;
+	padding: 10px 30px;
+	background: $color_screen;
+	color: $color_body;
+	@include transition(all, linear, 0.3s);
+}
+.btn:hover,
+.btn:focus,
+.btn:visited {
+	background: $color_hover;
+	color: $color_body;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}

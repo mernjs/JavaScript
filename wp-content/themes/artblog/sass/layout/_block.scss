@@ -1,0 +1,123 @@
+.wp-block-search {
+	max-width: 450px;
+	margin-bottom: 10px;
+	.wp-block-search__label {
+		color: $color_title;
+		margin-bottom: 6px;
+	}
+	.wp-block-search__button {
+		padding: 10px 12px;
+		margin-left: 0;
+	}
+}
+
+.wp-block-latest-comments__comment-excerpt p {
+	margin: 0;
+}
+
+.wp-block-separator {
+	border-bottom: 1px solid $color_border_bottom;
+	height: inherit;
+	&.is-style-dots {
+		color: $color_border_bottom;
+	}
+}
+
+.entry-content {
+	.wp-block-latest-posts {
+		margin-bottom: 22px;
+		padding: 0;
+		&.is-grid {
+			li {
+				margin: 0 10px 6px 0;
+			}
+		}
+	}
+}
+
+.wp-block-quote {
+	border-left: 5px solid $color_entry_meta;
+    margin-left: 50px;
+    padding: 20px;
+    &.is-large {
+    	border-left: 5px solid $color_entry_meta;
+    	margin-left: 50px;
+    	padding: 20px;
+    }
+}
+
+.wp-block-audio {
+	margin-bottom: 22px;
+}
+
+
+.wp-block-pullquote {
+	padding: 0;
+	border-top: 2px solid $color_border_bottom;
+    border-bottom: 2px solid $color_border_bottom;
+    &.is-style-solid-color {
+		padding: 0;
+		border-top: 2px solid $color_border_bottom;
+	    border-bottom: 2px solid $color_border_bottom;
+	    blockquote {
+	    	max-width: 100%;
+	    	text-align: center;
+	    	p {
+	    		font-size: $font_size_heading;
+	    		line-height: 1.3;
+	    		margin-bottom: 6px;
+	    	}
+	    }
+    }
+	blockquote {
+		margin: 0;
+		border: none;
+		&.has-text-color {
+			p,
+			cite {
+				color: inherit;
+			}
+		}
+	}
+	&.alignwide {
+		blockquote {
+			max-width: 100%;
+    		text-align: center;
+		}
+	}
+	cite {
+		color: $color_screen;
+		font-size: $font_size_meta;
+	}
+	p {
+		font-size: $font_size_heading;
+		line-height: 1.3;
+		margin-bottom: 6px;
+	}
+	.wp-block-pullquote__citation,
+	footer {
+		font-size: $font_size_meta;
+	}
+
+}
+
+.wp-block-image {
+	figcaption {
+		font-size: $font_size_paragraph;
+		font-style: italic;
+		margin-bottom: 1.5em;
+		text-align: left;
+	}
+}
+
+.wp-block-cover-image {
+	margin-bottom: 16px;
+}
+
+.wp-block-cover {
+	margin-bottom: 22px;
+}
+
+p.has-drop-cap:not(:focus)::first-letter {
+	font-size: 5em;
+}

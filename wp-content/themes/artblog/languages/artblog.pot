@@ -1,0 +1,432 @@
+# <!=Copyright (C) 2020 WP Concern
+# This file is distributed under the GNU General Public License v2 or later.=!>
+msgid ""
+msgstr ""
+"Project-Id-Version: Artblog 2.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/artblog\n"
+"POT-Creation-Date: 2020-04-09 08:23:19+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"Last-Translator: WP Concern<ithemer.com@gmail.com>\n"
+"Language-Team: \n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en_US\n"
+"X-Poedit-SearchPath-0: ../../artblog\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: 404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:20
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: comments.php:30
+msgid "Leave a comment"
+msgstr ""
+
+#: comments.php:70
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:23
+#. translators: %s: Theme author
+msgid "Artblog by %s"
+msgstr ""
+
+#: functions.php:32 header.php:52 header.php:54
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:33
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:116
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:118
+msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:130
+#. translators: 1: Widget number.
+msgid "Footer %d"
+msgstr ""
+
+#: functions.php:175
+msgid "Open main menu"
+msgstr ""
+
+#: functions.php:176
+msgid "Close main menu"
+msgstr ""
+
+#: functions.php:177
+msgid "Expand submenu"
+msgstr ""
+
+#: functions.php:178
+msgid "Collapse submenu"
+msgstr ""
+
+#: header.php:22
+msgid "Skip to content"
+msgstr ""
+
+#: inc/admin/admin-content.php:14
+#. translators: 1: Theme Name 2: Version of the theme
+msgid "Welcome to %1$s - %2$s"
+msgstr ""
+
+#: inc/admin/admin-content.php:24
+msgid "View Demo"
+msgstr ""
+
+#: inc/admin/admin-content.php:25 inc/customizer.php:59
+msgid "Buy Pro"
+msgstr ""
+
+#: inc/admin/admin-content.php:31
+msgid "Customize Everything"
+msgstr ""
+
+#: inc/admin/admin-content.php:32
+msgid "Start customizing every aspect of the website with customizer."
+msgstr ""
+
+#: inc/admin/admin-content.php:33
+msgid "Go to Customizer"
+msgstr ""
+
+#: inc/admin/admin-content.php:37 inc/admin/admin-content.php:39
+msgid "Get Support"
+msgstr ""
+
+#: inc/admin/admin-content.php:38
+msgid "Have any queries, feedbacks or suggestions?"
+msgstr ""
+
+#: inc/admin/admin.php:41 inc/admin/admin.php:42
+msgid "About Artblog"
+msgstr ""
+
+#: inc/admin/admin.php:71
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: inc/controls.php:62
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+#: inc/core.php:51
+msgid "Read More"
+msgstr ""
+
+#: inc/core.php:53
+msgid "Copyright &copy; All rights reserved."
+msgstr ""
+
+#: inc/customizer.php:58
+msgid "Artblog Pro"
+msgstr ""
+
+#: inc/customizer.php:112
+msgid "Background Options"
+msgstr ""
+
+#: inc/helpers.php:80
+msgid "Home"
+msgstr ""
+
+#: inc/options.php:14
+msgid "Theme Options"
+msgstr ""
+
+#: inc/options.php:23
+msgid "Slider Options"
+msgstr ""
+
+#: inc/options.php:38
+msgid "Enable Slider"
+msgstr ""
+
+#: inc/options.php:54
+msgid "No of posts"
+msgstr ""
+
+#: inc/options.php:73
+msgid "Slider Category"
+msgstr ""
+
+#: inc/options.php:90
+msgid "Enable Autoplay"
+msgstr ""
+
+#: inc/options.php:101
+msgid "Blog Options"
+msgstr ""
+
+#: inc/options.php:117
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/options.php:134
+msgid "Read More Text"
+msgstr ""
+
+#: inc/options.php:144
+msgid "Category Color"
+msgstr ""
+
+#: inc/options.php:185
+msgid "Footer Options"
+msgstr ""
+
+#: inc/options.php:201
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/template-functions.php:51
+msgid "Go to top"
+msgstr ""
+
+#: inc/template-tags.php:111
+#. translators: %s: post title
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/template-tags.php:142
+#. translators: %s: Name of current post. Only visible to screen readers
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/widgets/author.php:22
+msgid "Artblog: Author"
+msgstr ""
+
+#: inc/widgets/author.php:26
+msgid "Displays author info."
+msgstr ""
+
+#: inc/widgets/author.php:31 inc/widgets/recent-posts-advanced.php:31
+#: inc/widgets/social.php:31
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/author.php:36
+msgid "Author Name:"
+msgstr ""
+
+#: inc/widgets/author.php:41
+msgid "Author URL:"
+msgstr ""
+
+#: inc/widgets/author.php:46
+msgid "Author Description:"
+msgstr ""
+
+#: inc/widgets/author.php:51
+msgid "Author Image:"
+msgstr ""
+
+#: inc/widgets/author.php:69
+msgid "Enter full URL."
+msgstr ""
+
+#: inc/widgets/author.php:72
+msgid "Enter valid email."
+msgstr ""
+
+#: inc/widgets/author.php:80
+msgid "Social Links"
+msgstr ""
+
+#: inc/widgets/author.php:100
+msgid "Facebook"
+msgstr ""
+
+#: inc/widgets/author.php:105
+msgid "Twitter"
+msgstr ""
+
+#: inc/widgets/author.php:110
+msgid "Instagram"
+msgstr ""
+
+#: inc/widgets/author.php:115
+msgid "Youtube"
+msgstr ""
+
+#: inc/widgets/author.php:120
+msgid "Email"
+msgstr ""
+
+#: inc/widgets/class-base.php:160
+msgid "Upload"
+msgstr ""
+
+#: inc/widgets/class-base.php:160
+msgid "Select Image"
+msgstr ""
+
+#: inc/widgets/class-base.php:160
+msgid "Choose Image"
+msgstr ""
+
+#: inc/widgets/class-base.php:162
+msgid "Remove"
+msgstr ""
+
+#: inc/widgets/recent-posts-advanced.php:22
+msgid "Artblog: Recent Posts Advanced"
+msgstr ""
+
+#: inc/widgets/recent-posts-advanced.php:26
+msgid "Displays recent posts."
+msgstr ""
+
+#: inc/widgets/recent-posts-advanced.php:36
+msgid "Select Category:"
+msgstr ""
+
+#: inc/widgets/recent-posts-advanced.php:38
+msgid "All Categories"
+msgstr ""
+
+#: inc/widgets/recent-posts-advanced.php:41
+msgid "Number of Posts:"
+msgstr ""
+
+#: inc/widgets/recent-posts-advanced.php:48
+msgid "Image Width:"
+msgstr ""
+
+#: inc/widgets/recent-posts-advanced.php:50
+msgid "px"
+msgstr ""
+
+#: inc/widgets/recent-posts-advanced.php:57
+msgid "Hide Category"
+msgstr ""
+
+#: inc/widgets/social.php:22
+msgid "Artblog: Social"
+msgstr ""
+
+#: inc/widgets/social.php:26
+msgid "Displays social links."
+msgstr ""
+
+#: inc/widgets/social.php:39
+msgid "Social menu is not set. Please create menu and assign it to Social Menu."
+msgstr ""
+
+#: search.php:20
+#. translators: %s: search query.
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/content-none.php:12
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:22
+#. translators: 1: link to WP admin new post page.
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:35
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:42
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:25 template-parts/content-single.php:51
+#: template-parts/content.php:66
+msgid "Pages:"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Artblog"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://ithemer.com/themes/artblog/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Artblog is a minimalist WordPress theme for personal, travel, fashion and "
+"all type of blogging websites. Additionally, it is a perfect feminine "
+"WordPress theme that comes with color options, slider and more. This simple "
+"blog theme is SEO ready and speed optimized which helps you to rank your "
+"website at the top of search engines. Artblog is the best responsive theme "
+"for bloggers, it has a perfect layout for all types of devices including "
+"desktop, smartphones, tablets, iPads, etc."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WP Concern"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://ithemer.com/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full Width"
+msgstr ""
+
+#: comments.php:33
+#. translators: %s: post title
+msgctxt "comments title"
+msgid "One reply on &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:37
+#. translators: 1: number of comments, 2: post title
+msgctxt "comments title"
+msgid "%1$s reply on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s replies on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/helpers.php:55
+msgctxt "Muli font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/template-tags.php:89
+#. translators: used between list items, there is a space after the comma
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: searchform.php:13
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:14
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:16
+msgctxt "submit button"
+msgid "Search"
+msgstr ""

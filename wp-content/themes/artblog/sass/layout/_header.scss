@@ -1,0 +1,113 @@
+.site {
+	overflow: hidden;
+}
+
+.site-content {
+	max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include for-size(phone-only) {
+    	margin-top: 0 !important;
+    }
+}
+
+
+
+.site-header {
+	margin-bottom: 50px;
+	background: $color_body;
+	padding: 20px 0;
+	.site-branding {
+		@include flexbox(true, center, space-between);
+		// padding: 40px 0 0;
+		@include for-size(desktop-up) {
+			position: relative;
+		}
+		.site-title {
+			font-family: $font_family_heading;
+			font-weight: 600;
+			font-size: $font_size_site_title;
+			margin: 0;
+			line-height: 1;
+			@include for-size(phone-only) {
+				font-size: $font_size_heading;
+			} 
+		}
+		.site-description {
+			line-height: 1;
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+		.custom-logo-link {
+			display: inline-block;
+			max-width: 250px;
+			margin-right: 10px;
+			line-height: 0;
+			img {
+				width: auto;
+				max-height: 60px;
+			}
+		}
+		.site-identity-wrap-outer {
+			@include flexbox (true, center, flex-start)
+		}
+	}
+}
+
+.center-aligned {
+	.site-branding {
+		@include flexbox(true, center, center, column);
+		@include for-size(desktop-up) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.site-identity-wrap-outer {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.right-aligned {
+	.site-branding {
+		.site-identity-wrap-outer {
+			-webkit-order: 2;
+			    -ms-order: 2;
+			        order: 2;
+		    .custom-logo-link {
+		    	-webkit-order: 2;
+		    	    -ms-order: 2;
+		    	        order: 2;
+		        margin-right: 0;
+		        margin-left: 10px;
+		    }
+		    .site-identity-wrapper {
+		    	-webkit-order: 1;
+		    	    -ms-order: 1;
+		    	        order: 1;
+		        text-align: right;
+		    }
+		}
+		.main-navigation-wrap {
+			-webkit-order: 1;
+			    -ms-order: 1;
+			        order: 1;
+		    .menu-toggle {
+		    	&::before {
+		    		left: 12px;
+		    	}
+		    }
+		    .site-navigation {
+		    	.menu {
+		    		-webkit-justify-content: flex-start;
+		    		        justify-content: flex-start;
+		    	}
+		    	a {
+		    		padding: 8px 50px 8px 0;
+		    		@include for-size(desktop-up) {
+		    			padding: 8px 25px;
+		    		}
+		    	}
+		    }
+		}
+	}
+}

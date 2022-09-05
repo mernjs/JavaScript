@@ -1,0 +1,95 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	font-family: $font_family_content;
+}
+
+h1 {
+	font-family: $font_family_heading;
+	font-size: $font_size_h1;
+	color: $color_title;
+}
+h2 {
+	font-family: $font_family_heading;
+	font-size: $font_size_h2;
+	color: $color_title;
+}
+h3 {
+	font-family: $font_family_heading;
+	font-size: $font_size_h3;
+	color: $color_title;
+}
+h4 {
+	font-family: $font_family_heading;
+	font-size: $font_size_h4;
+	color: $color_title;
+}
+h5,h6 {
+	font-family: $font_family_heading;
+	font-size: $font_size_h5;
+	color: $color_title;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+span {
+	font-weight: 400;
+}
+
+p {
+	font-size: $font_size_paragraph;
+	font-weight: 400;
+	margin-bottom: 10px;
+	color: $color_paragraph;
+	line-height: 1.7;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+address {
+	margin: 0 0 12px;
+	font-style: normal;
+	color: $color_paragraph;
+}
+
+pre {
+	background: #eee;
+	font-size: $font_size_paragraph;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-style: normal;
+	font-size: $font_size_paragraph;
+	font-family: monospace, monospace;
+    background: #e3e3e3;
+    padding: 1px 5px;
+    border-radius: 1px;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}

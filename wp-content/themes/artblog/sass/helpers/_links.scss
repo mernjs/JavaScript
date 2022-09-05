@@ -1,0 +1,16 @@
+a {
+	@include links ($color_link, none, none);
+	
+	&:hover,
+	&:active {
+		@include links ($color_link_hover, none, none);
+	}
+
+	&:focus {
+		@include links ($color_link_hover, 1px dotted $color_link_hover, none);
+	}
+
+	&:visited {
+		@include links ($color_link, 1px dotted $color_link_hover, none);
+	}
+}

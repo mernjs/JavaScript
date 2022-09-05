@@ -1,0 +1,59 @@
+/* container*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* media*/
+@media (min-width: 1200px){
+	.container {
+	    max-width: 1200px;
+	}
+}
+
+/* col-width*/
+.col-1 {
+	.widget-column {
+		float: left;
+		width: 100%;
+		padding: 0 15px;
+	}
+}
+.col-2 {
+	.widget-column {
+		float: left;
+		width: 50%;
+		padding: 0 15px;
+		@include for-size(phone-only) {
+			width: 100%;
+		}
+	}
+}
+.col-3 {
+	.widget-column {
+		float: left;
+		width: 33.33%;
+		padding: 0 15px;
+		@include for-size(tablet-portrait-up) {
+			width: 50%;
+		}
+		@include for-size(phone-only) {
+			width: 100%;
+		}
+	}
+}
+.col-4 {
+	.widget-column {
+		float: left;
+		width: 25%;
+		padding: 0 15px;
+		@include for-size(tablet-portrait-up) {
+			width: 50%;
+		}
+		@include for-size(phone-only) {
+			width: 100%;
+		}
+	}
+}
