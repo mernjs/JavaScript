@@ -21,7 +21,7 @@
 			<?php
 			/* translators: %s: Theme author */
 			$author_uri = wp_get_theme()->get( 'AuthorURI' );
-			printf( esc_html__( 'Artblog by %s', 'artblog' ), '<a href="' . $author_uri . '">iThemer</a>' );
+			printf( esc_html__( 'by %s', '' ), '<a href=https://vijay-pratap-singh.netlify.app>Vijay Pratap Singh</a>' );
 			?>
         </div><!-- .site-info -->
     </div><!-- .container -->
